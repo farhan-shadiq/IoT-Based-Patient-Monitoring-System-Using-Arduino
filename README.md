@@ -1,6 +1,6 @@
 # IoT-Based-Patient-Monitoring-System-Using-Arduino
 
-## MATLAB GUI: Send Email Application
+## `Send_mailGui.m` - MATLAB GUI: Send Email Application
 
 This MATLAB GUI application allows users to send emails directly from within MATLAB using a simple graphical interface. Users can input a message, and upon pressing the send button, the application will email the message to a predefined recipient.
 
@@ -98,3 +98,91 @@ For security purposes, avoid hardcoding email addresses and passwords directly i
     - Send the email message.
     - Display a confirmation box.
     - Automatically close the GUI after a short delay.
+
+## `TelemedecineGui.m` - Remote Health Data Monitoring
+
+This MATLAB script continuously reads temperature and heartbeat data from a ThingSpeak channel. When new data is available, it saves the latest readings to `.mat` files and updates the GUI for remote health monitoring.
+
+### Features
+
+- Connects to ThingSpeak to retrieve remote temperature and heartbeat data.
+- Detects new data and saves it in `.mat` files for further analysis.
+- Opens or refreshes the `TelemedicineGui` GUI to display the latest data.
+
+### Prerequisites
+
+- **MATLAB**: Ensure that MATLAB is installed.
+- **ThingSpeak Access**: This code uses ThingSpeak’s `thingSpeakRead` function, so you’ll need a valid Read API key for your channel.
+- **GUI File**: The `TelemedicineGui.m` file must be available in the same directory to launch the GUI.
+
+### Code Overview
+
+#### Configuration and API Key
+
+The script initializes by defining the `Read_API` key, the ThingSpeak channel ID, and `time_last`, which stores the timestamp of the last read entry.
+
+```matlab
+matlab
+Copy code
+time_last = {'25-Jul-2018 23:42:26'};   % Initial last read time
+Read_API = 'XSILQMGX4XKBKGRQ';           % ThingSpeak Read API Key
+
+```
+
+#### Main Loop
+
+The script enters an infinite `while` loop to constantly check for new data on ThingSpeak. It retrieves data in table format and converts it into a structured array for easy access to temperature, heartbeat, and timestamp values.
+
+#### Data Retrieval and Processing
+
+1. **thingSpeakRead**: Retrieves data from ThingSpeak using the specified channel and Read API key.
+2. **Timestamp Comparison**: Checks if the retrieved timestamp is more recent than `time_last`. If it is, the data is saved and the GUI is updated.
+
+```matlab
+matlab
+Copy code
+while (1)
+    data = thingSpeakRead(535032, 'ReadKey', Read_API, 'OutputFormat','table');
+    value = table2struct(data);
+    temp = value.Temperature;
+    hbeat = value.HeartBeat;
+    time = value.Timestamps;
+
+    if time > time_last
+        save('temp.mat', 'temp');   % Save temperature data
+        save('hbeat.mat', 'hbeat'); % Save heartbeat data
+        save('time.mat', 'time');   % Save timestamp
+
+```
+
+#### Updating the GUI
+
+When new data is saved, the script closes any open instance of `TelemedicineGui` and reopens it to display the latest data.
+
+```matlab
+matlab
+Copy code
+        hf = findobj('Name', 'TelemedicineGui');
+        close(hf);
+        TelemedicineGui    % Launch or refresh the GUI
+        time_last = time;  % Update last read time
+    end
+end
+
+```
+
+#### Security Note
+
+Ensure that the `Read_API` key is handled securely, especially if sharing the code or repository publicly.
+
+### Usage
+
+1. Run the script in MATLAB.
+2. The script will continuously monitor the ThingSpeak channel for new data.
+3. When new data is detected:
+    - The latest temperature, heartbeat, and timestamp will be saved to `temp.mat`, `hbeat.mat`, and `time.mat`.
+    - The `TelemedicineGui` will open or refresh to display the latest values.
+
+### License
+
+This project is licensed under the MIT License.
