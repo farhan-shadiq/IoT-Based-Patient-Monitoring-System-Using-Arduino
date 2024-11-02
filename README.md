@@ -21,7 +21,7 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
 
 - Reads temperature from an analog temperature sensor.
 - Calculates heartbeat rate from a digital heartbeat sensor.
-- Sends the temperature and heartbeat data to ThingSpeak over WiFi.
+- Sends the temperature and heartbeat data to [ThingSpeak](https://thingspeak.com/) over WiFi.
 
 ## Components
 
