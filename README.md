@@ -26,7 +26,7 @@ The file `Send_mailGui.m` is responsible for initializing the GUI and setting up
 
 This function initializes the GUI, updates the handles structure, and sets up the default behavior when the GUI is opened.
 
-```
+```matlab
 function Send_mailGui_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 guidata(hObject, handles);
@@ -37,7 +37,7 @@ set(handles.edit1,'String', '');
 
 Defines the output for the GUI.
 
-```
+```matlab
 function varargout = Send_mailGui_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 ```
@@ -54,7 +54,7 @@ Manages user input in the text field where the message is entered.
 
 Triggered when the send button is clicked. This function retrieves the entered message, configures email settings, and sends the email using MATLAB’s `sendmail` function. After sending the email, it displays a confirmation message and closes the GUI.
 
-```
+```matlab
 function pushbutton1_Callback(hObject, eventdata, handles)
 message = get(handles.edit1,'String');
 mail = 'your-email@gmail.com';    % Your Gmail address
@@ -121,7 +121,7 @@ This MATLAB script continuously reads temperature and heartbeat data from a Thin
 
 The script initializes by defining the `Read_API` key, the ThingSpeak channel ID, and `time_last`, which stores the timestamp of the last read entry.
 
-```
+```matlab
 time_last = {'25-Jul-2018 23:42:26'};   % Initial last read time
 Read_API = 'XSILQMGX4XKBKGRQ';           % ThingSpeak Read API Key
 
@@ -136,7 +136,7 @@ The script enters an infinite `while` loop to constantly check for new data on T
 1. **thingSpeakRead**: Retrieves data from ThingSpeak using the specified channel and Read API key.
 2. **Timestamp Comparison**: Checks if the retrieved timestamp is more recent than `time_last`. If it is, the data is saved and the GUI is updated.
 
-```
+```matlab
 while (1)
     data = thingSpeakRead(535032, 'ReadKey', Read_API, 'OutputFormat','table');
     value = table2struct(data);
@@ -155,7 +155,7 @@ while (1)
 
 When new data is saved, the script closes any open instance of `TelemedicineGui` and reopens it to display the latest data.
 
-```
+```matlab
         hf = findobj('Name', 'TelemedicineGui');
         close(hf);
         TelemedicineGui    % Launch or refresh the GUI
@@ -196,9 +196,8 @@ The `send_mail_message` function allows users to send emails via Gmail using MAT
 
 ### Function Syntax
 
-```
+```matlab
 send_mail_message(id, subject, message, attachment)
-
 ```
 
 #### Parameters
@@ -212,9 +211,8 @@ send_mail_message(id, subject, message, attachment)
 
 To send an email after a simulation is complete, use the following command:
 
-```
+```matlab
 send_mail_message('its.neeraj', 'Simulation finished', 'This is the message area', 'results.doc')
-
 ```
 
 ### Code Overview
@@ -223,10 +221,9 @@ send_mail_message('its.neeraj', 'Simulation finished', 'This is the message area
 
 At the beginning of the function, users need to input their Gmail credentials. Replace the placeholders with your actual Gmail email address and password:
 
-```
+```matlab
 mail = '<Your GMail email address>';    % Replace with your Gmail address
 password = '<Your GMail password>';      % Replace with your Gmail password
-
 ```
 
 #### Handling Input Arguments
@@ -241,21 +238,19 @@ The function checks the number of input arguments to manage optional parameters:
 
 The function sets up the preferences for the Gmail SMTP service:
 
-```
+```matlab
 setpref('Internet','E_mail',mail);
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','SMTP_Username',mail);
 setpref('Internet','SMTP_Password',password);
-
 ```
 
 #### Sending the Email
 
 The function checks if the `mail` variable matches a placeholder and prompts the user to update their credentials if it does. It then uses MATLAB's `sendmail` function to send the email:
 
-```
+```matlab
 sendmail(emailto, subject, message, attachment);
-
 ```
 
 ### Security Note
