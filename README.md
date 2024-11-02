@@ -28,6 +28,8 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
 - Install the **ESP8266WiFi** library, which is usually included with the board package.
 
 ## `Telemedicine_ESP8266.ino` - Configuring the ESP8266 Microcontroller
+Configure the ESP8266 microcontroller by modifying the `Telemedicine_ESP8266.ino` file which can be found in the filepath: `/Telemedicine_ESP8266_/Telemedicine_ESP8266/Telemedicine_ESP8266.ino`
+
 ### Configuration
 
 1. **ThingSpeak API Key**: Sign up for a ThingSpeak account and create a new channel to receive an API key. Replace `apiKey` with your unique key.
