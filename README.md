@@ -1,4 +1,4 @@
-# IoT-Based-Patient-Monitoring-System-Using-Arduino
+# IoT Based Patient Monitoring System Using ESP8266 Microcontroller
 This project utilizes an ESP8266 microcontroller to monitor temperature and heartbeat data. It sends the collected data to [ThingSpeak](https://thingspeak.com/) for remote monitoring and analysis.
 
 ## Features
