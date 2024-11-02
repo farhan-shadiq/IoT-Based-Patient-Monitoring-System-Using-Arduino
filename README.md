@@ -99,7 +99,7 @@ For security purposes, avoid hardcoding email addresses and passwords directly i
     - Display a confirmation box.
     - Automatically close the GUI after a short delay.
 
-## `TelemedecineGui.m` - Remote Health Data Monitoring
+## `Telemedecine.m` - Remote Health Data Monitoring
 
 This MATLAB script continuously reads temperature and heartbeat data from a ThingSpeak channel. When new data is available, it saves the latest readings to `.mat` files and updates the GUI for remote health monitoring.
 
