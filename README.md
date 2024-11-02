@@ -28,7 +28,7 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
 - **ESP8266** microcontroller
 - **Temperature Sensor** (connected to analog pin `A0`)
 - **Heartbeat Sensor** (connected to digital pin `D2`)
-- **WiFi** connection for data transmission to ThingSpeak
+- **WiFi** connection for data transmission to [ThingSpeak](https://thingspeak.com/)
 
 ## Circuit Connections
 
