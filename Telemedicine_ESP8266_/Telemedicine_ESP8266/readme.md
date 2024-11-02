@@ -31,7 +31,7 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
 ### Configuration
 
 1. **ThingSpeak API Key**: Sign up for a ThingSpeak account and create a new channel to receive an API key. Replace `apiKey` with your unique key.
-2. **WiFi Credentials**: Replace `ssid` and `pass` with your WiFi network's name and password in the `Telemedicine.ino` file.
+2. **WiFi Credentials**: Replace `ssid` and `pass` with your WiFi network's name and password in the `Telemedicine_ESP8266.ino` file.
 
 ### Code
 
