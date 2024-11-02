@@ -1,4 +1,37 @@
 # IoT-Based-Patient-Monitoring-System-Using-Arduino
+This project utilizes an ESP8266 microcontroller to monitor temperature and heartbeat data. It sends the collected data to [ThingSpeak](https://thingspeak.com/) for remote monitoring and analysis.
+
+## Features
+
+- Reads temperature from an analog temperature sensor.
+- Calculates heartbeat rate from a digital heartbeat sensor.
+- Sends the temperature and heartbeat data to ThingSpeak over WiFi.
+
+## Components
+
+- **ESP8266** microcontroller
+- **Temperature Sensor** (connected to analog pin `A0`)
+- **Heartbeat Sensor** (connected to digital pin `D2`)
+- **WiFi** connection for data transmission to ThingSpeak
+
+## Circuit Diagram
+
+- Temperature Sensor: Connect the output to `A0`.
+- Heartbeat Sensor: Connect the output to `D2`.
+- ESP8266: Connect to WiFi to send data.
+
+## Setup
+
+### Prerequisites
+
+- Install the [ESP8266 Board Package](https://arduino-esp8266.readthedocs.io/en/latest/installing.html) in the Arduino IDE.
+- Install the **ESP8266WiFi** library, which is usually included with the board package.
+
+### Configuration
+
+1. **ThingSpeak API Key**: Sign up for a ThingSpeak account and create a new channel to receive an API key. Replace `apiKey` with your unique key.
+2. **WiFi Credentials**: Replace `ssid` and `pass` with your WiFi network's name and password.
+
 
 ## `Send_mailGui.m` - MATLAB GUI: Send Email Application
 
