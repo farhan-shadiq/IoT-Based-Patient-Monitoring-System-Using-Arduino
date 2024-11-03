@@ -7,7 +7,13 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
   - [Circuit Connections](#circuit-connections)
   - [Setup](#setup)
 
+  - [Configuring the ESP8266 Microcontroller - `Telemedicine_ESP8266.ino`](#configuring-the-esp8266-microcontroller----telemedicine-esp8266ino-)
 
+  - [MATLAB GUI: Send Email Application - `Send_mailGui.m`](#matlab-gui--send-email-application----send-mailguim-)
+
+  - [Remote Health Data Monitoring - `Telemedecine.m`](#remote-health-data-monitoring----telemedecinem-)
+
+  - [Notifying Users via Email - `send_mail_message.m`](#notifying-users-via-email----send-mail-messagem-)
 
 
 ## Features
