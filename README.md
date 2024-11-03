@@ -7,13 +7,13 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
   - [Circuit Connections](#circuit-connections)
   - [Setup](#setup)
 
-  - [Configuring the ESP8266 Microcontroller - `Telemedicine_ESP8266.ino`](#configuring-the-esp8266-microcontroller----telemedicine-esp8266ino-)
+  - [Configuring the ESP8266 Microcontroller - "Telemedicine_ESP8266.ino"](#configuring-the-esp8266-microcontroller----telemedicine-esp8266ino-)
 
-  - [MATLAB GUI: Send Email Application - `Send_mailGui.m`](#matlab-gui--send-email-application----send-mailguim-)
+  - [MATLAB GUI: Send Email Application - "Send_mailGui.m"](#matlab-gui--send-email-application----send-mailguim-)
 
-  - [Remote Health Data Monitoring - `Telemedecine.m`](#remote-health-data-monitoring----telemedecinem-)
+  - [Remote Health Data Monitoring - "Telemedecine.m"](#remote-health-data-monitoring----telemedecinem-)
 
-  - [Notifying Users via Email - `send_mail_message.m`](#notifying-users-via-email----send-mail-messagem-)
+  - [Notifying Users via Email - "send_mail_message.m"](#notifying-users-via-email----send-mail-messagem-)
 
 
 ## Features
@@ -42,7 +42,7 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
 - Install the [ESP8266 Board Package](https://arduino-esp8266.readthedocs.io/en/latest/installing.html) in the Arduino IDE.
 - Install the **ESP8266WiFi** library, which is usually included with the board package.
 
-## Configuring the ESP8266 Microcontroller - `Telemedicine_ESP8266.ino`
+## Configuring the ESP8266 Microcontroller - "Telemedicine_ESP8266.ino"
 Configure the ESP8266 microcontroller by modifying the `Telemedicine_ESP8266.ino` file which can be found in the filepath: `/Telemedicine_ESP8266_/Telemedicine_ESP8266/Telemedicine_ESP8266.ino`
 
 ### Configuration
@@ -203,7 +203,7 @@ void loop()
 - **Performance**: Use an interrupt-based approach for heartbeat calculation.
 - **Error Handling**: Add retry mechanisms for network and server errors.
 
-## MATLAB GUI: Send Email Application - `Send_mailGui.m` 
+## MATLAB GUI: Send Email Application - "Send_mailGui.m" 
 
 This MATLAB GUI application allows users to send emails directly from within MATLAB using a simple graphical interface. Users can input a message, and upon pressing the send button, the application will email the message to a predefined recipient.
 
@@ -302,7 +302,7 @@ For security purposes, avoid hardcoding email addresses and passwords directly i
     - Display a confirmation box.
     - Automatically close the GUI after a short delay.
 
-## Remote Health Data Monitoring - `Telemedecine.m`
+## Remote Health Data Monitoring - "Telemedecine.m"
 
 This MATLAB script continuously reads temperature and heartbeat data from a ThingSpeak channel. When new data is available, it saves the latest readings to `.mat` files and updates the GUI for remote health monitoring.
 
@@ -382,7 +382,7 @@ Ensure that the `Read_API` key is handled securely, especially if sharing the co
 
 
 
-## Notifying Users via Email - `send_mail_message.m`
+## Notifying Users via Email - "send_mail_message.m"
 
 The `send_mail_message` function allows users to send emails via Gmail using MATLAB. This function can be utilized after completing calculations or simulations to notify users of the results.
 
