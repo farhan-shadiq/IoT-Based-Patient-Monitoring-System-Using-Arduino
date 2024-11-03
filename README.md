@@ -2,17 +2,17 @@
 This project utilizes an ESP8266 microcontroller to monitor temperature and heartbeat data. It sends the collected data to [ThingSpeak](https://thingspeak.com/) for remote monitoring and analysis.
 
 ## Table of Contents
-  * [Features](#features)
-  * [Components](#components)
-  * [Circuit Connections](#circuit-connections)
-  * [Setup](#setup)
-  * [`Telemedicine_ESP8266.ino` - Configuring the ESP8266 Microcontroller](#-telemedicine-esp8266ino----configuring-the-esp8266-microcontroller)
+  - [Features](#features)
+  - [Components](#components)
+  - [Circuit Connections](#circuit-connections)
+  - [Setup](#setup)
+  - [`Telemedicine_ESP8266.ino` - Configuring the ESP8266 Microcontroller](#-telemedicine-esp8266ino----configuring-the-esp8266-microcontroller)
  
-  * [`Send_mailGui.m` - MATLAB GUI: Send Email Application](#-send-mailguim----matlab-gui--send-email-application)
+  - [`Send_mailGui.m` - MATLAB GUI: Send Email Application](#-send-mailguim----matlab-gui--send-email-application)
  
-  * [`Telemedecine.m` - Remote Health Data Monitoring](#-telemedecinem----remote-health-data-monitoring)
+  - [`Telemedecine.m` - Remote Health Data Monitoring](#-telemedecinem----remote-health-data-monitoring)
  
-  * [`send_mail_message.m` - Notifying Users via Email](#-send-mail-messagem----notifying-users-via-email)
+  - [`send_mail_message.m` - Notifying Users via Email](#-send-mail-messagem----notifying-users-via-email)
 
 
 
