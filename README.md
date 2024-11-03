@@ -6,13 +6,6 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
   - [Components](#components)
   - [Circuit Connections](#circuit-connections)
   - [Setup](#setup)
-  - [`Telemedicine_ESP8266.ino` - Configuring the ESP8266 Microcontroller](#-telemedicine-esp8266ino----configuring-the-esp8266-microcontroller)
- 
-  - [`Send_mailGui.m` - MATLAB GUI: Send Email Application](#-send-mailguim----matlab-gui--send-email-application)
- 
-  - [`Telemedecine.m` - Remote Health Data Monitoring](#-telemedecinem----remote-health-data-monitoring)
- 
-  - [`send_mail_message.m` - Notifying Users via Email](#-send-mail-messagem----notifying-users-via-email)
 
 
 
@@ -204,7 +197,7 @@ void loop()
 - **Performance**: Use an interrupt-based approach for heartbeat calculation.
 - **Error Handling**: Add retry mechanisms for network and server errors.
 
-## `Send_mailGui.m` - MATLAB GUI: Send Email Application
+## MATLAB GUI: Send Email Application - `Send_mailGui.m` 
 
 This MATLAB GUI application allows users to send emails directly from within MATLAB using a simple graphical interface. Users can input a message, and upon pressing the send button, the application will email the message to a predefined recipient.
 
@@ -303,7 +296,7 @@ For security purposes, avoid hardcoding email addresses and passwords directly i
     - Display a confirmation box.
     - Automatically close the GUI after a short delay.
 
-## `Telemedecine.m` - Remote Health Data Monitoring
+## Remote Health Data Monitoring - `Telemedecine.m`
 
 This MATLAB script continuously reads temperature and heartbeat data from a ThingSpeak channel. When new data is available, it saves the latest readings to `.mat` files and updates the GUI for remote health monitoring.
 
@@ -383,7 +376,7 @@ Ensure that the `Read_API` key is handled securely, especially if sharing the co
 
 
 
-## `send_mail_message.m` - Notifying Users via Email
+## Notifying Users via Email - `send_mail_message.m`
 
 The `send_mail_message` function allows users to send emails via Gmail using MATLAB. This function can be utilized after completing calculations or simulations to notify users of the results.
 
