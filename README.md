@@ -36,7 +36,7 @@ This project utilizes an ESP8266 microcontroller to monitor temperature and hear
 - Install the [ESP8266 Board Package](https://arduino-esp8266.readthedocs.io/en/latest/installing.html) in the Arduino IDE.
 - Install the **ESP8266WiFi** library, which is usually included with the board package.
 
-## `Telemedicine_ESP8266.ino` - Configuring the ESP8266 Microcontroller
+## Configuring the ESP8266 Microcontroller - `Telemedicine_ESP8266.ino`
 Configure the ESP8266 microcontroller by modifying the `Telemedicine_ESP8266.ino` file which can be found in the filepath: `/Telemedicine_ESP8266_/Telemedicine_ESP8266/Telemedicine_ESP8266.ino`
 
 ### Configuration
